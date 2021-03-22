@@ -43,6 +43,18 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 下列所有项目都与Casbin一致，采用开源协议：[Apache 2.0 license](LICENSE)
 
+- [1. Casbin文档中文翻译 + 官网优化](#1-casbin文档中文翻译--官网优化)
+- [2. Casbin.js核心前端库研发（前端Javascript + React + vue）](#2-casbinjs核心前端库研发前端javascript--react--vue)
+- [3. Casbin官方核心论坛（前端React + Javascript，后端Golang）](#3-casbin官方核心论坛前端react--javascript后端golang)
+- [4. Casbin官方会议投稿系统（前端React + Javascript，后端Golang）](#4-casbin官方会议投稿系统前端react--javascript后端golang)
+- [5. Casbin-CPP 生态完善（C/C++）](#5-casbin-cpp-生态完善cc)
+- [6. Casbin-Lua 开发（Lua）](#6-casbin-lua-开发lua)
+- [7. Casbin-RS 生态完善（Rust）](#7-casbin-rs-生态完善rust)
+- [8. PyCasbin 生态完善（Python）](#8-pycasbin-生态完善python)
+- [9. PHP-Casbin 生态完善（PHP）](#9-php-casbin-生态完善php)
+- [10. Node-casbin 生态完善（Node.js）](#10-node-casbin-生态完善nodejs)
+
+
 ### 1. Casbin核心引擎（Golang）
 
 1. 项目标题：Casbin核心引擎（Golang）
@@ -83,29 +95,163 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin-forum
    - https://github.com/casbin/casbin
 
-### 3. Casbin分布式插件 （Golang)
-1. 项目标题：Casbin分布式插件（Golang)
-2. 项目描述：Casbin在初始化时将规则集装载到内存中，在规则集发生变更时将该次变更持久化到文件或者数据库等媒介。我们希望在此基础上： 1）基于Raft协议实现单机、分布式环境中不同Casbin实例的规则集同步；２）探索如何将规则集分组，映射到不同节点，使特定规则集的增，删以及某个请求的权限计算都在正确的节点进行，以此减轻单机的内存压力。在未来此插件可以替代 watcher。
+### 1. Casbin文档中文翻译 + 官网优化
+
+1. 项目标题：Casbin文档中文翻译 + 官网优化
+2. 项目描述：Casbin官网（https://casbin.org/ ）基于开源文档工具[Docusaurus](https://docusaurus.io/ )构建（基于React），采用Docusaurus所集成的[CrowdIn](https://crowdin.com/project/casbin )在线翻译平台进行众包翻译。Casbin官网原始文档均为英文，由CrowdIn上的贡献者自愿将英文翻译为其他各语言（如中文，韩文等）。但是目前各语言的翻译率较低，中文翻译率目前仅有15%，不利于开源项目在国内推广。因此希望能够将中文翻译率提高到100%。并且该项目也会承担一部分Casbin社区推广（如Casbin官方微信公众号）文章的撰写编辑、公众号管理等临时任务。该项目首先进入Talent 2021，若社区今年有[Google Season of Docs 2021](https://github.com/casbin/SeasonOfDocs2021 )名额则优先入选，若无名额则进入[中科院软件所暑期2021项目](https://github.com/casbin/Summer2020 )。
 3. 项目难度：高
-4. 项目社区导师：[刘子轩 (Nodece)](https://github.com/nodece)
-5. 导师联系方式：nodeces@gmail.com
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz@gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
-   - 基于Raft, Tcp (with TLS)实现单机、分布式环境中不同Casbin实例之间的规则集同步
-   - 正确，充足的单元/集成测试，确保Casbin在分布式环境下运行的正确性
-   - 支持动态增、删节点(AKA. dynamic membership)
-   - 探索如何将规则集分组，映射到不同节点，确定规则集的增，删以及某个请求的权限计算都在正确的节点进行,以此减轻单机的内存压力
-   - 解决Casbin Golang主仓库&相关仓库中的issues：https://github.com/casbin/casbin/issues
+   - 在CrowdIn翻译平台将Casbin官网英文内容翻译为中文，进度翻译至100%（目前为15%）
+   - （可选）改进官网功能、优化内容排版，增加新的文档内容
+   - （有时）撰写、编辑Casbin社区推广（如Casbin官方微信公众号）文章
+   - 解决Casbin-website主仓库&相关仓库中的issues：https://github.com/casbin/casbin-website/issues
 8. 项目技术要求：
-   - 熟悉Golang语言
+   - 热爱并有能力撰写技术博客、文章
+   - 了解React框架和NPM包管理
+   - 了解Git、GitHub相关操作
+   - 了解Casbin的工作原理
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-website
+   - https://github.com/casbin/casbin.github.io
+
+### 2. Casbin.js核心前端库研发（前端Javascript + React + vue）
+
+1. 项目标题：Casbin.js核心前端库研发（前端Javascript + React + vue）
+2. 项目描述：Casbin本身专注于服务器端（后端）的访问控制、权限管理，然而Web App（前端）也有权限管理的需求：如列出当前登录用户有权访问的所有列表项，或当前用户无权进行删除帖子的操作，则把删除按钮变灰或隐藏等等。因此Casbin推出专门用于前端权限展示的开源库：[Casbin.js](https://github.com/casbin/casbin.js) 。该库主要实现2个功能：1）调用后端Casbin（可能是Go，也可能是Java等）提供的接口（RESTful或cookie等方式），获取当前登录用户的权限；2）将获取到的权限转换为列表、按钮的显示状态。Casbin.js在GSoC 2020期间已经研发了3个月，但是目前从功能、适配性、可用性等方面离最终完成还仍有很大距离。之前的研发文档、记录可从此处获得：https://github.com/casbin/casbin.js/issues 。
+3. 项目难度：高
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 大规模重构、改造、完善[Casbin.js](https://github.com/casbin/casbin.js) ，从功能、适配性、可用性上达到类似CASL项目：https://github.com/stalniy/casl
+   - 完成核心主库Casbin.js的开发，推送到NPM。同时类似CASL项目，包装出React、Vue等框架的适配器，方便React、Vue用户使用
+   - 开发至少一种后端语言（如Go Casbin）的对接Casbin.js的API接口，从而使后端把权限传给前端的Casbin.js
+   - 解决Casbin.js主仓库&相关仓库中的issues：https://github.com/casbin/casbin.js/issues
+8. 项目技术要求：
+   - 熟悉HTML、Javascript、CSS等前端技术
+   - 熟悉React或Vue框架，两种都熟悉更好
+   - 熟悉NPM包管理，熟悉Git、GitHub相关操作
+   - 至少了解一种后端语言，如Go、Java、Python、Node.js、Rust等，有全栈工程师相关经验；
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin.js
+   - https://github.com/casbin-js
+
+### 3. Casbin官方核心论坛（前端React + Javascript，后端Golang）
+
+1. 项目标题：Casbin官方核心论坛（前端React + Javascript，后端Golang）
+2. 项目描述：Casbin社区目前采用QQ群（中文），Gitter（英文）进行社区交流，交流渠道比较有限。我们打算开发一个同时面向Casbin开发者和用户的官方论坛：Casbin-forum（https://github.com/casbin/casbin-forum ），风格与[V2EX](https://v2ex.com/)类似。该论坛开源，因此也欢迎其他开源社区使用。
+3. 项目难度：高
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 完成一个界面风格类似[V2EX](https://v2ex.com/)的论坛，作为Casbin开源社区的官方论坛
+   - 继续维护该项目，添加features，解决bugs，完善其邮件列表功能
+   - 解决Casbin Forum主仓库&相关仓库中的issues：https://github.com/casbin/casbin-forum/issues
+8. 项目技术要求：
+   - 熟悉React、Javascript语言（前端）
+   - 熟悉Golang语言（后端）
    - 熟悉Git、GitHub相关操作
 9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-forum
    - https://github.com/casbin/casbin
-   - https://github.com/casbin
 
-### 4. Casbin分布式高可用（Rust）
+### 4. Casbin官方会议投稿系统（前端React + Javascript，后端Golang）
 
-1. 项目标题：Casbin分布式高可用（Rust）
+1. 项目标题：Casbin官方会议投稿系统（前端React + Javascript，后端Golang）
+2. 项目描述：Casbin社区目前采用Docusaurus静态页面作为官网（https://github.com/casbin/casbin-website），通过git commit更新文档内容，文档、稿件处理渠道比较有限。我们打算开发一个同时面向Casbin技术写作者（technical writer）的官方稿件处理、评审、展示系统：Casbin-OA（https://github.com/casbin/casbin-oa ）。该投稿系统的另一个功能是全方位展示Casbin访问控制的功能，后台利用[Casbin](https://github.com/casbin/casbin)进行权限管理，前台利用[casbin.js](https://github.com/casbin/casbin.js)控制UI元素，如按钮的显示。该论坛会成为Casbin技术最强有力的展示。该项目开源，因此也欢迎其他开源社区使用。
+3. 项目难度：高
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 完成一个会议投稿系统，作为Casbin开源社区的官方稿件处理系统
+   - 后台利用[Casbin](https://github.com/casbin/casbin)进行权限管理
+   - 前台利用[casbin.js](https://github.com/casbin/casbin.js)控制UI元素，如按钮的显示（[casbin.js](https://github.com/casbin/casbin.js)目前还在开发中，如果casbin.js未开发完毕则此要求作废，可自行实现前端页面访问控制）
+   - 解决Casbin OA&相关仓库中的issues：https://github.com/casbin/casbin-oa/issues
+8. 项目技术要求：
+   - 熟悉React、Javascript语言（前端）
+   - 熟悉Golang语言（后端）
+   - 熟悉Git、GitHub相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-oa
+   - https://github.com/casbin/casbin
+
+8. 项目技术要求：
+   - 熟悉C#、.net core
+   - 熟悉OAuth 2.0
+   - 熟悉java和spring
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/Casbin.NET
+   - https://github.com/casbin-net/EFCore-Adapter
+
+### 5. Casbin-CPP 生态完善（C/C++）
+
+1. 项目标题：Casbin-CPP 生态完善（C/C++）
+2. 项目描述：Casbin-CPP 是Casbin的C/C++版实现，功能和 Casbin（Golang）基本一致。目前，Casbin-CPP实现了Casbin的基本功能，但还有很多功能尚未实现，并且有很多Bug，代码质量还有调优的可能，Casbin-CPP对周边框架的支持不够完善，所以我们希望对Casbin-CPP进行完善和优化，同时需要对Casbin-CPP的生态予以完善。
+3. 项目难度：高
+4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
+5. 导师联系方式：joey.xf@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 完善Casbin-CPP，和Casbin（Golang）保持一致
+   - 在保证功能、结构不变的情况下，调优代码质量
+   - 解决Casbin-CPP仓库中的issues：https://github.com/casbin/casbin-cpp/issues
+8. 项目技术要求：
+   - 熟悉C/C++语言
+   - 熟悉Casbin其他任意一种语言的实现
+   - 熟悉Git、GitHub相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-cpp
+   - https://github.com/casbin-cpp
+
+### 6. jCasbin 生态完善（Java）
+
+1. 项目标题：jCasbin 生态完善（Java）
+2. 项目描述：jCasbin 在 Java 平台上取得了不错的进展，但是我们仍然需要努力工作，以帮助 Casbin 成为世界上最受欢迎的身份授权库。目前Java语言上最流行的授权库是Apache Shiro和Spring Security，最流行的Web框架是Spring。我们需要实现Casbin针对Spring等框架的插件，使Spring用户可以无缝接入Casbin。同时要兼容Apache Shiro和Spring Security的接口，让目前正在使用Apache Shiro和Spring Security的项目可以无缝迁移到Casbin。同时jCasbin也需要及时跟踪Golang Casbin主库的最新feature并移植到Java版本中来。
+3. 项目难度：中
+4. 项目社区导师：[Zhengjin Fang](https://github.com/fangzhengjin)
+5. 导师联系方式：fangzhengjin@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 实现针对Spring，包括Spring Cloud，SpringBoot等的权限认证中间件
+   - 实现兼容Apache Shiro和Spring Security的接口
+   - 根据用户需求，实现缺失的数据库adapter
+   - 解决 jCasbin 主仓库&相关仓库中的 issues：https://github.com/casbin/jcasbin/issues
+8. 项目技术要求：
+   - 熟悉 Java 语言
+   - 熟悉 SQL
+   - 熟悉 Git、GitHub 相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/jcasbin
+   - https://github.com/jcasbin
+
+### 6. Casbin-Lua 开发（Lua）
+
+1. 项目标题：Casbin-Lua 开发（Lua）
+2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
+3. 项目难度：高
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 实现 Casbin 的 Lua 版本
+   - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
+   - 解决 Node-Casbin 主仓库&相关仓库中的 issues：https://github.com/casbin/casbin-lua/issues
+8. 项目技术要求：
+   - 熟悉 Lua 语言
+   - 熟悉 Nginx、OpenResty 等
+   - 熟悉 Git、GitHub 相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-lua
+   - https://github.com/casbin-lua
+
+### 7. Casbin-RS 生态完善（Rust）
+
+1. 项目标题：Casbin-RS 生态完善（Rust）
 2. 项目描述：Casbin在初始化时将规则集装载到内存中，在规则集发生变更时将该次变更持久化到文件或者数据库等媒介。我们希望在此基础上： 1）基于Raft协议实现单机、分布式环境中不同Casbin实例的规则集同步；２）探索如何将规则集分组，映射到不同节点，使特定规则集的增，删以及某个请求的权限计算都在正确的节点进行，以此减轻单机的内存压力
 3. 项目难度：高
 4. 项目社区导师：[江成 (GopherJ)](https://github.com/GopherJ)
@@ -124,53 +270,13 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin-rs
    - https://github.com/casbin-rs
 
-### 5. Casbin服务化（C++）
+### 8. PyCasbin 生态完善（Python）
 
-1. 项目标题：Casbin服务化（C++）
-2. 项目描述：基于C++版本的casbin探索casbin服务化的可能性，目标是在微服务架构中提供开箱即用的中心化的授权服务
-3. 项目难度：中
-4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
-5. 导师联系方式：joey.xf@gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 使用C++语言实现正确、高性能的casbin基础功能
-   - 添加docker、k8s部署支持
-   - 使用grpc和protobuf对外提供服务调用
-   - 优化在大数据和分布式环境下casbin的性能
-8. 项目技术要求：
-   - 熟悉C++语言
-   - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-cpp
-
-### 6. jCasbin 生态完善（Java）
-
-1. 项目标题：jCasbin 生态完善（Java）
-2. 项目描述：jCasbin 在 Java 平台上取得了不错的进展，但是我们仍然需要努力工作，以帮助 Casbin 成为世界上最受欢迎的身份授权库。目前Java语言上最流行的授权库是Apache Shiro和Spring Security，最流行的Web框架是Spring。我们需要实现Casbin针对Spring等框架的插件，使Spring用户可以无缝接入Casbin。同时要兼容Apache Shiro和Spring Security的接口，让目前正在使用Apache Shiro和Spring Security的项目可以无缝迁移到Casbin。同时jCasbin也需要及时跟踪Golang Casbin主库的最新feature并移植到Java版本中来。
+1. 项目标题：PyCasbin 生态完善（Python）
+2. 项目描述：PyCasbin 是Casbin的Python版实现，功能和 Casbin（Golang）基本一致。目前，PyCasbin实现了Casbin的主要功能，但还有少许功能尚未实现，另外代码质量还有调优的可能，PyCasbin对周边框架的支持不够完善，所以我们希望对PyCasibn进行完善和优化，同时需要对PyCasin的生态予以完善。
 3. 项目难度：中
 4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
 5. 导师联系方式：hsluoyz@gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 实现针对Spring，包括Spring Cloud，SpringBoot等的权限认证中间件
-   - 实现兼容Apache Shiro和Spring Security的接口
-   - 根据用户需求，实现缺失的数据库adapter
-   - 解决 jCasbin 主仓库&相关仓库中的 issues：https://github.com/casbin/jcasbin/issues
-8. 项目技术要求：
-   - 熟悉 Java 语言
-   - 熟悉 SQL
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/jcasbin
-   - https://github.com/jcasbin
-
-### 7. PyCasbin完善和优化
-
-1. 项目标题：PyCasbin完善和优化
-2. 项目描述：PyCasbin 是Casbin的Python版实现，功能和 Casbin（Golang）基本一致。目前，PyCasbin实现了Casbin的主要功能，但还有少许功能尚未实现，另外代码质量还有调优的可能，PyCasbin对周边框架的支持不够完善，所以我们希望对PyCasibn进行完善和优化，同时需要对PyCasin的生态予以完善。
-3. 项目难度：中
-4. 项目社区导师：[techoner](https://github.com/techoner)
-5. 导师联系方式：techqiang@gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 完善PyCasbin，和Casbin（Golang）保持一致
@@ -184,9 +290,9 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/pycasbin
    - https://github.com/pycasbin
 
-### 8. PHP-Casbin生态完善
+### 9. PHP-Casbin 生态完善（PHP）
 
-1. 项目标题：PHP-Casbin生态完善
+1. 项目标题：PHP-Casbin 生态完善（PHP）
 2. 项目描述：[PHP-Casbin](https://github.com/php-casbin/php-casbin) 是Casbin的PHP版实现，功能和 Casbin（Golang）基本一致。目前，PHP-Casbin已经支持对`Laravel` `ThinkPHP` `Yii` `Codeigniter` `CakePHP` 等主流框架的适配。目前还需要开发对`Symfony`的扩展，C级别的框架进行支持，例如：`Phalcon Framework`，基于Swoole的框架支持，例如： `Hyperf` `easyswoole`等。除此之外，我们也希望Casbin有个PHP的C/C++扩展，以提升性能。
 3. 项目难度：中
 4. 项目社区导师：[techoner](https://github.com/techoner)
@@ -205,11 +311,11 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/php-casbin/php-casbin
    - https://github.com/php-casbin
 
-### 9. Node-casbin 生态完善
+### 10. Node-casbin 生态完善（Node.js）
 
-1. 项目标题：Node-Casbin 生态完善
+1. 项目标题：Node-Casbin 生态完善（Node.js）
 2. 项目描述：Node-Casbin 在 Node.js 平台上取得了不错的进展，但是我们仍然需要努力工作，以帮助 Casbin 成为世界上最受欢迎的身份授权库。目前 Node-Casbin 已经对`koa`、`egg`、`express`、`hapi` 等主流框架提供了权限认证中间件，还需要对`nest`、`meteor` 提供支持。adapter 是 Casbin 持久化策略的插件，目前我们已经支持`TypeORM`、`Sequelize`，这些都是 ORM, 因此我们还需要考虑提供纯数据库驱动的 adapter。
-3. 项目难度：低
+3. 项目难度：中
 4. 项目社区导师：[刘子轩(nodece)](https://github.com/nodece)
 5. 导师联系方式：nodeces@gmail.com
 6. 合作导师联系方式（选填）：无
@@ -230,8 +336,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：Casbin.NET生态完善
 2. 项目描述：Casbin.NET是Casbin的Dotnet版实现，目前仅完成核心功能，需要对项目进行进一步的优化和完善。目前计划提供一个完成核心能力开箱即用的服务化(RESTful)的解决方案(Casbin.SamNet)，并且适配Steeltoe。
 3. 项目难度：高
-4. 项目社区导师：[周而易始(huazhikui)](https://github.com/huazhikui)
-5. 导师联系方式：huazhikui@126.com
+4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
+5. 导师联系方式：joey.xf@gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 完善和优化Casbin.NET，并解决https://github.com/casbin/Casbin.NET/issues
@@ -245,45 +351,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/Casbin.NET
    - https://github.com/casbin-net/EFCore-Adapter
-
-### 11. Casbin 仪表盘Web界面（前端Vue/React + Typescript，后端Golang/Casbin-Rs）
-
-1. 项目标题：Casbin 仪表盘Web界面（前端Vue/React + Typescript，后端Golang/Casbin-Rs）
-2. 项目描述：Casbin-Dashboard（https://dashboard.casbin.org/ ）是我们近期启动的一个项目，由于Casbin通常在后台运行，没有界面，只有API，配置起来不够友好。因此我们打算开发一个Casbin的图形化界面，即Casbin Dashboard。我们希望Casbin Dashboard能够帮助Casbin的用户，尤其是对代码不熟悉的运维人员，能够通过图形化界面的操作，管理Casbin的模型、策略、正确性、集群运行状态等等。未来一切与Casbin有关的，可图形化的操作，都会集成到Casbin Dashboard中。
-3. 项目难度：中
-4. 项目社区导师：[张合龙 (BetaCat0)](https://github.com/BetaCat0)
-5. 导师联系方式：outman99@hotmail.com
-6. 合作导师联系方式（选填）：[江成 (GopherJ)](https://github.com/GopherJ)
-7. 项目产出要求：
-   - 完成一个可用的Casbin 仪表盘Web界面，可以对接Casbin library，甚至Casbin-Server
-   - 用户可以通过Web界面完成策略查看、修改、添加、删除，也可以在线运行测试用例，保证策略正确性
-   - 用户可以通过Web界面管理多个Casbin的实体，如Model，Adapter，Enforcer等等（未来甚至可以对Casbin集群进行管理）
-   - 解决Casbin Dashboard主仓库&相关仓库中的issues：https://github.com/casbin/casbin-dashboard/issues
-8. 项目技术要求：
-   - 熟悉Vue/React、Typescript语言（前端）
-   - 熟悉Golang/Rust语言（后端）
-   - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-dashboard
-   - https://github.com/casbin/casbin
-
-### 12. 基于 Kubernetes 构建云原生分布式访问控制应用
-
-1. 项目标题：基于 Kubernetes 构建云原生分布式访问控制应用
-2. 项目描述：随着云原生技术的普及，Kubernetes 已成为云原生的基石，依赖 Kubernetes 构建一个分布式、可管理多种应用的权限策略的访问控制应用。
-3. 项目难度：高
-4. 项目社区导师：[张合龙 (BetaCat0)](https://github.com/BetaCat0)
-5. 导师联系方式：outman99@hotmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 根据 Casbin 现有的功能，依赖 Kubernetes 实现一个分布式、可管理多种应用的权限策略的访问控制服务端。(优先考虑分布式)
-   - 该应用需提供管理端，可提供安装服务端到 Kubernetes 集群，查看应用日志，可管理应用策略
-   - 实现把云原生项目接入Casbin访问控制的插件，如k8s的插件：https://github.com/casbin/casbin/issues/470 ，更多的插件实现对象参考：https://www.openpolicyagent.org/docs/latest/ecosystem/ ，我们需要实现类似的插件，扩大我们的生态
-8. 项目技术要求：
-   - 熟悉 Golang、Kubernetes
-   - 具备一定的分布式、云原生应用知识
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin
 
 所有可选项目详见：https://github.com/casbin/Summer2021#可选项目列表
 
