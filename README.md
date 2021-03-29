@@ -147,8 +147,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：Casbin官方核心论坛（前端React + Javascript，后端Golang）
 2. 项目描述：Casbin社区目前采用QQ群（中文），Gitter（英文）进行社区交流，交流渠道比较有限。我们打算开发一个同时面向Casbin开发者和用户的官方论坛：Casbin-forum（https://github.com/casbin/casbin-forum ），风格与[V2EX](https://v2ex.com/)类似。该论坛开源，因此也欢迎其他开源社区使用。
 3. 项目难度：高
-4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
-5. 导师联系方式：hsluoyz (AT) gmail.com
+4. 项目社区导师：[张军洁 (kocoler)](https://github.com/kocoler)
+5. 导师联系方式：tsglsdrs (AT) 163.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 完成一个界面风格类似[V2EX](https://v2ex.com/)的论坛，作为Casbin开源社区的官方论坛
