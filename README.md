@@ -247,20 +247,21 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 ### 10. Casbin-RS 生态完善（Rust）
 
 1. 项目标题：Casbin-RS 生态完善（Rust）
-2. 项目描述：Casbin在初始化时将规则集装载到内存中，在规则集发生变更时将该次变更持久化到文件或者数据库等媒介。我们希望在此基础上： 1）基于Raft协议实现单机、分布式环境中不同Casbin实例的规则集同步；２）探索如何将规则集分组，映射到不同节点，使特定规则集的增，删以及某个请求的权限计算都在正确的节点进行，以此减轻单机的内存压力
-3. 项目难度：中
-4. 项目社区导师：[江成 (GopherJ)](https://github.com/GopherJ)
-5. 导师联系方式：cocathecafe (AT) gmail.com
+2. 项目描述：Casbin Rust 目前尚缺乏各个主流 Rust Web 框架的集成，以及对于 `gRPC` 的集成支持。此议题希望学生独立完成对于 [Warp](https://github.com/seanmonstar/warp) 、[Tide](https://github.com/http-rs/tide) 框架的中间件集成；独立完成 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc)的基本实现和文档工作。
+3. 项目难度：高
+4. 项目社区导师：[Eason Chai(Hackerchai)](https://github.com/hackerchai)
+5. 导师联系方式：i (AT) hackerchai.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
-   - 基于Raft, Tcp (with TLS)实现单机、分布式环境中不同Casbin实例之间的规则集同步
-   - 正确，充足的单元/集成测试，确保Casbin在分布式环境下运行的正确性
-   - 支持动态增、删节点(AKA. dynamic membership)
-   - 探索如何将规则集分组，映射到不同节点，确定规则集的增，删以及某个请求的权限计算都在正确的节点进行,以此减轻单机的内存压力
-   - 解决Casbin Rust主仓库&相关仓库中的issues：https://github.com/casbin/casbin-rs/issues
+   - 针对 [Warp](https://github.com/seanmonstar/warp) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明
+   - 针对 [Tide](https://github.com/http-rs/tide) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明
+   - 参考 [Casbin-Server](https://github.com/casbin/casbin-server) 实现   Rust 版本 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc) ,使用 [Tonic](https://github.com/hyperium/tonic) 框架实现完备的异步支持，并且支持多种适配器
+   - 解决 Casbin Rust 主仓库和相关仓库中的 issues ：https://github.com/casbin/casbin-rs/issues
 8. 项目技术要求：
    - 熟悉Rust语言
    - 熟悉Git、GitHub相关操作
+   - 熟练掌握一种后端框架，对于中间件，数据库操作有一定了解
+   - 熟悉 `RPC` 工作原理，了解一定的云原生开发
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/casbin-rs
    - https://github.com/casbin-rs
