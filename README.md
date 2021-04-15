@@ -57,6 +57,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [12. PHP-Casbin 生态完善（PHP）](#12-php-casbin-生态完善php)
 - [13. Node-casbin 生态完善（Node.js）](#13-node-casbin-生态完善nodejs)
 - [14. Casbin.NET生态完善（C#）](#14-casbinnet生态完善c)
+- [15. Casbin-RS Raft 集成实验性探索（Rust）](#15-casbin-rs-raft-集成实验性探索rust)
 
 ### 1. Casbin核心引擎（Golang）
 
@@ -347,6 +348,29 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/Casbin.NET
    - https://github.com/casbin-net/EFCore-Adapter
+   
+### 15. Casbin-RS Raft 集成实验性探索（Rust）
+
+1. 项目标题：Casbin-RS Raft 集成（Rust）
+2. 项目描述：在 Summer 2020 ，Casbin Rust 进行了初步的 Raft 集成实现，目前尚需要进行部分重构，改善可用性，以方便用户能够进行 Casbin-RS Raft 的快速部署或集成。此议题希望学生根据产出要求独立完成对于 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 的重构维护工作、独立设计并实现改良方案，并完成相应的文档工作。
+3. 项目难度：高
+4. 项目社区导师：[Chojan Shang(PsiACE)](https://github.com/PsiACE)
+5. 导师联系方式：psiace (AT) outlook.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - （可选）在 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 基础上完成依赖升级，补充文档和示例。此项用于帮助参与项目的学生熟悉 [Raft-RS](https://github.com/tikv/raft-rs/) 和 [Tonic](https://github.com/hyperium/tonic) ，如果已经有前置经验可以选择跳过。
+   - 参考 [hraft-dispatcher（Go）](https://github.com/casbin/hraft-dispatcher) 对 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 进行重构，设计正确，充足的单元/集成测试以确保可用性，完成相应的文档工作。架构可以参考  [toshi（Rust）](https://github.com/toshi-search/Toshi) 或者 [MeiliSearch-Raft](https://github.com/meilisearch/MeiliSearch/tree/raft) 。
+   - 探索负载均衡方案的设计与实现，例如：允许对 follower 执行读操作，必要时通过变更 leader 的方式完成写操作，以及 multi-raft 。
+   - 在设计和实现基本完成情况下，与同期的 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc) 项目进行联动，避免维护重复代码。
+   - 解决 Casbin Rust 主仓库和相关仓库中的 issues ：https://github.com/casbin/casbin-rs/issues
+8. 项目技术要求：
+   - 熟悉 Rust 语言
+   - 熟悉 Git、GitHub 相关操作
+   - 理解 Raft 共识算法，具有快速学习能力
+   - 熟悉 `RPC` 工作原理，了解一定的云原生开发
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-rs
+   - https://github.com/casbin-rs/casbin-raft
 
 所有可选项目详见：https://github.com/casbin/Summer2021#可选项目列表
 
