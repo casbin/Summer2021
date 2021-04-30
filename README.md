@@ -57,6 +57,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [12. PHP-Casbin 生态完善（PHP）](#12-php-casbin-生态完善php)
 - [13. Node-casbin 生态完善（Node.js）](#13-node-casbin-生态完善nodejs)
 - [14. Casbin.NET生态完善（C#）](#14-casbinnet生态完善c)
+- [15. Casbin Mesh (Golang) ](#15-casbin-mesh-golang)
 
 ### 1. Casbin核心引擎（Golang）
 
@@ -347,6 +348,31 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/Casbin.NET
    - https://github.com/casbin-net/EFCore-Adapter
+
+### 15. Casbin Mesh (Golang)
+
+1. 项目标题：Casbin Mesh (Golang)
+2. 项目描述：Casbin Mesh 是一个管理多个访问控制应用的系统，我们将会使用 Casbin + Raft 协议构建开箱即用、可伸缩的访问管理服务，用户可以在任意服务上更新、查找规则集以及检查规则。
+3. 项目难度：高
+4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
+5. 导师联系方式：nodeces@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 基于 Raft + TCP(with TLS) 提供可伸缩性服务
+   - 正确，充足的单元/集成测试，确保程序运行的正确性
+   - 支持在 Leader 或者 Follower 节点更新、查找规则集以及检查规则
+   - 提供身份认证系统保护系统的安全，例如第三方客户端的接入
+   - 提供 Go SDK 访问该系统
+   - 提供 WEB/CLI 管理用户的访问控制应用
+   - 提供安全审计
+
+8. 项目技术要求：
+   - 熟悉 Golang
+   - 熟悉 Raft
+
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin
+   - https://github.com/casbin/hraft-dispatcher
 
 所有可选项目详见：https://github.com/casbin/Summer2021#可选项目列表
 
