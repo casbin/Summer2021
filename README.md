@@ -49,14 +49,10 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [4. Casdoor身份认证系统（前端React + Javascript，后端Golang）](#4-casdoor身份认证系统前端react--javascript后端golang)
 - [5. Casbin官方核心论坛（前端React + Javascript，后端Golang）](#5-casbin官方核心论坛前端react--javascript后端golang)
 - [6. Casbin官方会议投稿系统（前端React + Javascript，后端Golang）](#6-casbin官方会议投稿系统前端react--javascript后端golang)
-- [7. Casbin-CPP 生态完善（C/C++）](#7-casbin-cpp-生态完善cc)
 - [8. jCasbin 生态完善（Java）](#8-jcasbin-生态完善java)
-- [9. Lua-Casbin 开发（Lua）](#9-lua-casbin-开发lua)
 - [10. Casbin-RS 生态完善（Rust）](#10-casbin-rs-生态完善rust)
 - [11. PyCasbin 生态完善（Python）](#11-pycasbin-生态完善python)
 - [12. PHP-Casbin 生态完善（PHP）](#12-php-casbin-生态完善php)
-- [13. Node-casbin 生态完善（Node.js）](#13-node-casbin-生态完善nodejs)
-- [14. Casbin.NET生态完善（C#）](#14-casbinnet生态完善c)
 - [15. Casbin Mesh (Golang) ](#15-casbin-mesh-golang)
 
 ### 1. Casbin核心引擎（Golang）
@@ -184,26 +180,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin-oa
    - https://github.com/casbin/casbin
 
-### 7. Casbin-CPP 生态完善（C/C++）
-
-1. 项目标题：Casbin-CPP 生态完善（C/C++）
-2. 项目描述：Casbin-CPP 是Casbin的C/C++版实现，功能和 Casbin（Golang）基本一致。目前，Casbin-CPP实现了Casbin的基本功能，但还有很多功能尚未实现，并且有很多Bug，代码质量还有调优的可能，Casbin-CPP对周边框架的支持不够完善，所以我们希望对Casbin-CPP进行完善和优化，同时需要对Casbin-CPP的生态予以完善。
-3. 项目难度：高
-4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
-5. 导师联系方式：joey.xf (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 完善Casbin-CPP，和Casbin（Golang）保持一致
-   - 在保证功能、结构不变的情况下，调优代码质量
-   - 解决Casbin-CPP仓库中的issues：https://github.com/casbin/casbin-cpp/issues
-8. 项目技术要求：
-   - 熟悉C/C++语言
-   - 熟悉Casbin其他任意一种语言的实现
-   - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-cpp
-   - https://github.com/casbin-cpp
-
 ### 8. jCasbin 生态完善（Java）
 
 1. 项目标题：jCasbin 生态完善（Java）
@@ -224,26 +200,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/jcasbin
    - https://github.com/jcasbin
-
-### 9. Lua-Casbin 开发（Lua）
-
-1. 项目标题：Casbin-Lua 开发（Lua）
-2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
-3. 项目难度：高
-4. 项目社区导师：[techoner](https://github.com/techoner)
-5. 导师联系方式：techqiang (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 实现 Casbin 的 Lua 版本
-   - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
-   - 解决 Node-Casbin 主仓库&相关仓库中的 issues：https://github.com/casbin/casbin-lua/issues
-8. 项目技术要求：
-   - 熟悉 Lua 语言
-   - 熟悉 Nginx、OpenResty 等
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-lua
-   - https://github.com/casbin-lua
 
 ### 10. Casbin-RS 生态完善（Rust）
 
@@ -307,47 +263,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/php-casbin/php-casbin
    - https://github.com/php-casbin
-
-### 13. Node-casbin 生态完善（Node.js）
-
-1. 项目标题：Node-Casbin 生态完善（Node.js）
-2. 项目描述：Node-Casbin 在 Node.js 平台上取得了不错的进展，但是我们仍然需要努力工作，以帮助 Casbin 成为世界上最受欢迎的身份授权库。目前 Node-Casbin 已经对`koa`、`egg`、`express`、`hapi` 等主流框架提供了权限认证中间件，还需要对`nest`、`meteor` 提供支持。adapter 是 Casbin 持久化策略的插件，目前我们已经支持`TypeORM`、`Sequelize`，这些都是 ORM, 因此我们还需要考虑提供纯数据库驱动的 adapter。
-3. 项目难度：中
-4. 项目社区导师：[刘子轩(nodece)](https://github.com/nodece)
-5. 导师联系方式：nodeces (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 实现 `nest`、`meteor` 权限认证中间件
-   - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
-   - 解决 Node-Casbin 主仓库&相关仓库中的 issues：https://github.com/casbin/node-casbin/issues
-8. 项目技术要求：
-   - 熟悉 TypeScript 语言
-   - 熟悉 SQL
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/node-casbin
-   - https://github.com/node-casbin
-
-### 14. Casbin.NET生态完善（C#）
-
-1. 项目标题：Casbin.NET生态完善（C#）
-2. 项目描述：Casbin.NET是Casbin的Dotnet版实现，目前仅完成核心功能，需要对项目进行进一步的优化和完善。目前计划提供一个完成核心能力开箱即用的服务化(RESTful)的解决方案(Casbin.SamNet)，并且适配Steeltoe。
-3. 项目难度：中
-4. 项目社区导师：[周而易始(huazhikui)](https://github.com/huazhikui)
-5. 导师联系方式：huazhikui (AT) 126.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 完善和优化Casbin.NET，并解决https://github.com/casbin/Casbin.NET/issues
-   - 增加并完成Casbin.SamNet解决方案（基于IdentityServer4），提供完整的权限管理、授权/认证服务（仅后端）
-   - 通过Steeltoe完成与Spring Cloud生态圈的融合
-
-8. 项目技术要求：
-   - 熟悉C#、.net core
-   - 熟悉OAuth 2.0
-   - 熟悉java和spring
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/Casbin.NET
-   - https://github.com/casbin-net/EFCore-Adapter
 
 ### 15. Casbin Mesh (Golang)
 
