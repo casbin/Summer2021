@@ -142,7 +142,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 ### 5. Casbin官方核心论坛（前端React + Javascript，后端Golang）
 
 1. 项目标题：Casbin官方核心论坛（前端React + Javascript，后端Golang）
-2. 项目描述：Casbin社区目前采用QQ群（中文），Gitter（英文）进行社区交流，交流渠道比较有限。我们打算开发一个同时面向Casbin开发者和用户的官方论坛：Casbin-forum（https://github.com/casbin/casbin-forum ），风格与[V2EX](https://v2ex.com/)类似。该论坛开源，因此也欢迎其他开源社区使用。
+2. 项目描述：Casbin社区目前采用QQ群（中文），Gitter（英文）进行社区交流，交流渠道比较有限。我们打算开发一个同时面向Casbin开发者和用户的官方论坛：casnode（https://github.com/casbin/casnode ），风格与[V2EX](https://v2ex.com/)类似。该论坛开源，因此也欢迎其他开源社区使用。
 3. 项目难度：高
 4. 项目社区导师：[张军洁 (kocoler)](https://github.com/kocoler)
 5. 导师联系方式：tsglsdrs (AT) 163.com
@@ -150,13 +150,13 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 7. 项目产出要求：
    - 完成一个界面风格类似[V2EX](https://v2ex.com/)的论坛，作为Casbin开源社区的官方论坛
    - 继续维护该项目，添加features，解决bugs，完善其邮件列表功能
-   - 解决Casbin Forum主仓库&相关仓库中的issues：https://github.com/casbin/casbin-forum/issues
+   - 解决Casnode&相关仓库中的issues：https://github.com/casbin/casnode/issues
 8. 项目技术要求：
    - 熟悉React、Javascript语言（前端）
    - 熟悉Golang语言（后端）
    - 熟悉Git、GitHub相关操作
 9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-forum
+   - https://github.com/casbin/casnode
    - https://github.com/casbin/casbin
 
 ### 6. Casbin官方会议投稿系统（前端React + Javascript，后端Golang）
