@@ -208,17 +208,18 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 3. 项目难度：高
 4. 项目社区导师：[Eason Chai(Hackerchai)](https://github.com/hackerchai)
 5. 导师联系方式：i (AT) hackerchai.com
-6. 合作导师联系方式（选填）：无
+6. 合作导师联系方式（选填）：psiace (AT) outlook.com
 7. 项目产出要求：
-   - 针对 [Warp](https://github.com/seanmonstar/warp) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明
-   - 针对 [Tide](https://github.com/http-rs/tide) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明
-   - 参考 [Casbin-Server](https://github.com/casbin/casbin-server) 实现   Rust 版本 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc) ,使用 [Tonic](https://github.com/hyperium/tonic) 框架实现完备的异步支持，并且支持多种适配器
+   - 针对 [Warp](https://github.com/seanmonstar/warp) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明，并且实现一个完备的实际应用样例
+   - 针对 [Tide](https://github.com/http-rs/tide) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明，并且实现一个完备的实际应用样例
+   - 完善 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 实现   Rust 版本 [Casbin-Raft (Go)](https://github.com/casbin/casbin-raft) ,使用 [Raft-rs](https://github.com/tikv/raft-rs) 框架实现完备的  `Raft` 协议支持；参考 [hraft-dispatcher（Go）](https://github.com/casbin/hraft-dispatcher) 对 [Casbin-Raft（Go）](https://github.com/casbin-rs/casbin-raft) 进行重构，设计正确，充足的单元/集成测试以确保可用性，完成相应的文档工作。架构可以参考  [toshi（Rust）](https://github.com/toshi-search/Toshi) 或者 [MeiliSearch-Raft](https://github.com/meilisearch/MeiliSearch/tree/raft)；要求可以投入实际生产环境
    - 解决 Casbin Rust 主仓库和相关仓库中的 issues ：https://github.com/casbin/casbin-rs/issues
 8. 项目技术要求：
    - 熟悉Rust语言
    - 熟悉Git、GitHub相关操作
    - 熟练掌握一种后端框架，对于中间件，数据库操作有一定了解
    - 熟悉 `RPC` 工作原理，了解一定的云原生开发
+   - 熟悉 `Raft` 协议工作原理
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/casbin-rs
    - https://github.com/casbin-rs
