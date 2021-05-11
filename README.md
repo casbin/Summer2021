@@ -79,7 +79,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：Casbin文档中文翻译 + 官网优化
 2. 项目描述：Casbin官网（https://casbin.org/ ）基于开源文档工具[Docusaurus](https://docusaurus.io/ )构建（基于React），采用Docusaurus所集成的[CrowdIn](https://crowdin.com/project/casbin )在线翻译平台进行众包翻译。Casbin官网原始文档均为英文，由CrowdIn上的贡献者自愿将英文翻译为其他各语言（如中文，韩文等）。但是目前各语言的翻译率较低，中文翻译率目前仅有15%，不利于开源项目在国内推广。因此希望能够将中文翻译率提高到100%。并且该项目也会承担一部分Casbin社区推广（如Casbin官方微信公众号）文章的撰写编辑、公众号管理等临时任务。该项目首先进入Talent 2021，若社区今年有[Google Season of Docs 2021](https://github.com/casbin/SeasonOfDocs2021 )名额则优先入选，若无名额则进入[中科院软件所暑期2021项目](https://github.com/casbin/Summer2020 )。
 3. 项目难度：中
-4. 项目社区导师：[刘子轩(nodece)](https://github.com/nodece)
+4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
 5. 导师联系方式：nodeces (AT) gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
@@ -206,7 +206,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：Casbin-RS 生态完善（Rust）
 2. 项目描述：Casbin Rust 目前尚缺乏各个主流 Rust Web 框架的集成，以及对于 `gRPC` 的集成支持。此议题希望学生独立完成对于 [Warp](https://github.com/seanmonstar/warp) 、[Tide](https://github.com/http-rs/tide) 框架的中间件集成；独立完成 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc)的基本实现和文档工作。
 3. 项目难度：高
-4. 项目社区导师：[Eason Chai(Hackerchai)](https://github.com/hackerchai)
+4. 项目社区导师：[柴轶晟 (Hackerchai)](https://github.com/hackerchai)
 5. 导师联系方式：i (AT) hackerchai.com
 6. 合作导师联系方式（选填）：psiace (AT) outlook.com
 7. 项目产出要求：
@@ -227,9 +227,9 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 ### 11. PyCasbin 生态完善（Python）
 
 1. 项目标题：PyCasbin 生态完善（Python）
-2. 项目描述：PyCasbin 是Casbin的Python版实现，功能和 Casbin（Golang）基本一致。目前，PyCasbin实现了Casbin的主要功能，但还有少许功能尚未实现，另外代码质量还有调优的可能，PyCasbin对周边框架的支持不够完善，所以我们希望对PyCasibn进行完善和优化，同时需要对PyCasin的生态予以完善。
+2. 项目描述：PyCasbin 是Casbin的Python版实现，功能和 Casbin（Golang）基本一致。目前，PyCasbin实现了Casbin的主要功能，但还有少许功能尚未实现，另外代码质量还有调优的可能，PyCasbin对周边框架的支持不够完善，所以我们希望对PyCasbin进行完善和优化，同时需要对PyCasbin的生态予以完善。
 3. 项目难度：中
-4. 项目社区导师：[techoner](https://github.com/techoner)
+4. 项目社区导师：[(李强) techoner](https://github.com/techoner)
 5. 导师联系方式：techqiang (AT) gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
@@ -249,7 +249,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：PHP-Casbin 生态完善（PHP）
 2. 项目描述：[PHP-Casbin](https://github.com/php-casbin/php-casbin) 是Casbin的PHP版实现，功能和 Casbin（Golang）基本一致。目前，PHP-Casbin已经支持对`Laravel` `ThinkPHP` `Yii` `Codeigniter` `CakePHP` 等主流框架的适配。目前还需要开发对`Symfony`的扩展，C级别的框架进行支持，例如：`Phalcon Framework`，基于Swoole的框架支持，例如： `Hyperf` `easyswoole`等。除此之外，我们也希望Casbin有个PHP的C/C++扩展，以提升性能。
 3. 项目难度：中
-4. 项目社区导师：[techoner](https://github.com/techoner)
+4. 项目社区导师：[(李强) techoner](https://github.com/techoner)
 5. 导师联系方式：techqiang (AT) gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
