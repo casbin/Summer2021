@@ -204,8 +204,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 ### 10. Casbin-RS 生态完善（Rust）
 
 1. 项目标题：Casbin-RS 生态完善（Rust）
-2. 项目描述：Casbin Rust 目前尚缺乏各个主流 Rust Web 框架的集成，以及对于 `gRPC` 的集成支持。此议题希望学生独立完成对于 [Warp](https://github.com/seanmonstar/warp) 、[Tide](https://github.com/http-rs/tide) 框架的中间件集成；独立完成 [casbin-grpc](https://github.com/casbin-rs/casbin-grpc)的基本实现和文档工作。
-3. 项目难度：中
+2. 项目描述：Casbin Rust 目前尚缺乏各个主流 Rust Web 框架的集成，以及对于 `Raft协议` 的完善。此议题希望学生独立完成对于 [Warp](https://github.com/seanmonstar/warp) 、[Tide](https://github.com/http-rs/tide) 框架的中间件集成；独立完成 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 的重构实现。
+3. 项目难度：高
 4. 项目社区导师：[柴轶晟 (Hackerchai)](https://github.com/hackerchai)
 5. 导师联系方式：i (AT) hackerchai.com
 6. 合作导师联系方式（选填）：psiace (AT) outlook.com
