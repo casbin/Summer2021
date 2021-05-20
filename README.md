@@ -56,6 +56,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
 - [SwiftCasbin 开发（Swift）](#swiftcasbin-开发swift)
 - [Lua-Casbin 开发（Lua）](#lua-casbin-开发lua)
+- [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心引擎（Golang）
 
@@ -297,8 +298,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：SwiftCasbin 开发（Swift）
 2. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。
 3. 项目难度：高
-4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
-5. 导师联系方式：hsluoyz (AT) gmail.com
+4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
+5. 导师联系方式：joey.xf (AT) gmail.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 实现 Casbin 的 Swift 版本
@@ -316,7 +317,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 1. 项目标题：Casbin-Lua 开发（Lua）
 2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
-3. 项目难度：中
+3. 项目难度：高
 4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
 5. 导师联系方式：techqiang (AT) gmail.com
 6. 合作导师联系方式（选填）：无
@@ -331,6 +332,26 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/casbin-lua
    - https://github.com/casbin-lua
+
+### Casbin Web前端UI设计开发（React + Javascript）
+
+1. 项目标题：Casbin 前端设计开发（React + Javascript）
+2. 项目描述：目前Casbin社区有多个涉及Web前端的项目，如OA系统、Casnode论坛、Casdoor等。这些系统本身已经有一个功能完整的前端页面，但是UI比较简陋，因此需要较为专业的前端设计+开发实现更好的UI。
+3. 项目难度：中
+4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
+5. 导师联系方式：nodeces@gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 改进Casbin社区各个项目的Web前端页面的设计，包括提供图片、切图，调整页面元素尺寸、布局，改进交互效果、动画效果等
+   - 在现有的功能完整但UI较为简陋的代码基础上，修改React, Javascript代码，提升UI效果
+8. 项目技术要求：
+   - 熟悉Web前端设计，包括切图、布局、交互等
+   - 熟悉HTML、CSS，能够编写React + Javascript代码来实现所提出的UI设计
+   - 熟悉 Git、GitHub 相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casdoor
+   - https://github.com/casbin/casnode
+   - https://github.com/casbin/casbin-oa
 
 所有可选项目详见：https://github.com/casbin/Summer2021#可选项目列表
 
