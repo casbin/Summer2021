@@ -55,6 +55,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [PHP-Casbin 生态完善（PHP）](#php-casbin-生态完善php)
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
 - [SwiftCasbin 开发（Swift）](#swiftcasbin-开发swift)
+- [Lua-Casbin 开发（Lua）](#lua-casbin-开发lua)
 
 ### Casbin核心引擎（Golang）
 
@@ -310,6 +311,26 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/SwiftCasbin
    - https://github.com/SwiftCasbin
+
+### Lua-Casbin 开发（Lua）
+
+1. 项目标题：Casbin-Lua 开发（Lua）
+2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
+3. 项目难度：中
+4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
+5. 导师联系方式：techqiang (AT) gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 实现 Casbin 的 Lua 版本
+   - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
+   - 解决 Lua-Casbin 主仓库&相关仓库中的 issues：https://github.com/casbin/casbin-lua/issues
+8. 项目技术要求：
+   - 熟悉 Lua 语言
+   - 熟悉 Nginx、OpenResty 等
+   - 熟悉 Git、GitHub 相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-lua
+   - https://github.com/casbin-lua
 
 所有可选项目详见：https://github.com/casbin/Summer2021#可选项目列表
 
