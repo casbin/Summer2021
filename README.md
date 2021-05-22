@@ -272,7 +272,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 1. 项目标题：Casbin Mesh (Golang)
 2. 项目描述：Casbin Mesh 是一个管理多个访问控制应用的系统，我们将会使用 Casbin + Raft 协议构建开箱即用、可伸缩的访问管理服务，用户可以在任意服务上更新、查找规则集以及检查规则。
-3. 项目难度：中
+3. 项目难度：高
 4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
 5. 导师联系方式：nodeces@gmail.com
 6. 合作导师联系方式（选填）：无
@@ -298,8 +298,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：SwiftCasbin 开发（Swift）
 2. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。
 3. 项目难度：高
-4. 项目社区导师：[谢非 (Joey)](https://github.com/xcaptain)
-5. 导师联系方式：joey.xf (AT) gmail.com
+4. 项目社区导师：[孟祥文 (cit117)](https://github.com/cit117)
+5. 导师联系方式：cit117 (AT) me.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 实现 Casbin 的 Swift 版本
@@ -317,7 +317,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 1. 项目标题：Casbin-Lua 开发（Lua）
 2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
-3. 项目难度：高
+3. 项目难度：中
 4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
 5. 导师联系方式：techqiang (AT) gmail.com
 6. 合作导师联系方式（选填）：无
@@ -387,7 +387,8 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 1. 发送【中文简历PDF】至Casbin社区官方邮箱：admin (AT) casbin.org 
 2. 加入《Casbin访问控制社区群》（QQ大群）：[546057381](https://shang.qq.com/wpa/qunwpa?idkey=8ac8b91fc97ace3d383d0035f7aa06f7d670fd8e8d4837347354a31c18fac885)
-3. 加入《Casbin软件所点亮计划-暑期2021-官方群》（QQ小群）：[637616705](https://qm.qq.com/cgi-bin/qm/qr?k=WsNgmQs-7wRGR_vB0IQ-57Tovs8EuQbw&jump_from=webapi) ，联系导师，与导师沟通项目细节和方案，完善项目申请书
+3. 加入《Casbin明日之星预选生计划-Talent for Casbin 2021-群》（QQ小群）：[540163681](https://qm.qq.com/cgi-bin/qm/qr?k=5MjIdZuPmAio6lfAr-NTxBY0CcoGL1yl&jump_from=webapi) ，联系导师，与导师沟通项目细节和方案，完善项目申请书
+4. 选择技术写作题目“Casbin文档中文翻译 + 官网优化”的同学，还需要加入《Casbin文档题目申请》（QQ文档群）：[714309545](https://qm.qq.com/cgi-bin/qm/qr?k=T-hOJN1IzKN638y2N9rJJDdIT1fqpfua&jump_from=webapi)，并仔细阅读群公告，联系导师沟通项目细节
 
 ### 2. 官网投递（2021年5月24日至2021年6月13日）
 
