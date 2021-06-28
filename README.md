@@ -49,6 +49,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casdoor身份认证系统（前端React + Javascript，后端Golang）](#casdoor身份认证系统前端react--javascript后端golang)
 - [Casbin官方核心论坛（前端React + Javascript，后端Golang）](#casbin官方核心论坛前端react--javascript后端golang)
 - [Casbin官方会议投稿系统（前端React + Javascript，后端Golang）](#casbin官方会议投稿系统前端react--javascript后端golang)
+- [Casbin官方OA系统（前端React + Javascript，后端Golang）](#casbin官方oa系统前端react--javascript后端golang)
 - [jCasbin 生态完善（Java）](#jcasbin-生态完善java)
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [PyCasbin 生态完善（Python）](#pycasbin-生态完善python)
@@ -172,6 +173,28 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
    - 完成一个会议投稿系统，作为Casbin开源社区的官方稿件处理系统
+   - 后台利用[Casbin](https://github.com/casbin/casbin)进行权限管理
+   - 前台利用[casbin.js](https://github.com/casbin/casbin.js)控制UI元素，如按钮的显示（[casbin.js](https://github.com/casbin/casbin.js)目前还在开发中，如果casbin.js未开发完毕则此要求作废，可自行实现前端页面访问控制）
+   - 解决Casbin Publish&相关仓库中的issues：https://github.com/casbin/casbin-publish/issues
+8. 项目技术要求：
+   - 熟悉React、Javascript语言（前端）
+   - 熟悉Golang语言（后端）
+   - 熟悉Git、GitHub相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casbin/casbin-publish
+   - https://github.com/casbin/casbin
+
+### Casbin官方OA系统（前端React + Javascript，后端Golang）
+
+1. 项目标题：Casbin官方OA系统（前端React + Javascript，后端Golang）
+2. 项目描述：随着Casbin开源社区的发展，社区成员越来越多，开源社区的管理成为一个重要问题。Casbin社区目前已经开发了OA系统的基础版本（https://github.com/casbin/casbin-oa ），作为社区成员的管理平台。目前该OA系统仍然是通过成员自行填写周报，来进行统计。未来我们希望通过GitHub API，自动化地填写周报模板，减轻使用者的负担。另外，我们也希望实现自动化的GitHub Issue Triage，即把GitHub issue自动分类、打标签（bug, feature还是question)，甚至实现社区机器人自动AT相关repo的负责成员等功能。这个项目首先Casbin社区自身会使用，同时也欢迎其他开源社区使用，提高社区管理的智能化水平。
+3. 项目难度：中
+4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
+5. 导师联系方式：hsluoyz (AT) gmail.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 通过GitHub API，自动化地填写周报模板，减轻使用者的负担
+   - 实现自动化的GitHub Issue Triage，即把GitHub issue自动分类、打标签（bug, feature还是question)，甚至实现社区机器人自动AT相关repo的负责成员等功能
    - 后台利用[Casbin](https://github.com/casbin/casbin)进行权限管理
    - 前台利用[casbin.js](https://github.com/casbin/casbin.js)控制UI元素，如按钮的显示（[casbin.js](https://github.com/casbin/casbin.js)目前还在开发中，如果casbin.js未开发完毕则此要求作废，可自行实现前端页面访问控制）
    - 解决Casbin OA&相关仓库中的issues：https://github.com/casbin/casbin-oa/issues
